@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Storyteller</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e2e2e2;
+    --accent: #4f46e5;
+    --code-bg: #f4f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --fg: #ececec;
+      --muted: #a3a3a3;
+      --border: #2e2e33;
+      --accent: #a5b4fc;
+      --code-bg: #232328;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 96px;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 4px; }
+  h2 { font-size: 1.25rem; margin-top: 2.4em; border-top: 1px solid var(--border); padding-top: 1.4em; }
+  h3 { font-size: 1.05rem; margin-top: 1.6em; }
+  .subtitle { color: var(--muted); margin-top: 0; }
+  .updated { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.95rem; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  code, .pill {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 0.9em;
+  }
+  ul { padding-left: 1.3em; }
+  .callout {
+    background: var(--code-bg);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 1.2em 0;
+    font-size: 0.95rem;
+  }
+  footer { margin-top: 3em; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Storyteller - a reading &amp; listening app for learning English</p>
+  <p class="updated">Last updated: <strong>1st August 2026</strong></p>
+
+  <p>
+    This Privacy Policy explains what information Storyteller ("the App", "we", "us")
+    collects, how it is used, and the choices you have. Storyteller is built for
+    reading and listening to stories, with an on-device dictionary and English-learning
+    tools. Most content and learning features run entirely on your device.
+  </p>
+
+  <h2>1. Information We Collect</h2>
+
+  <table>
+    <tr><th>Category</th><th>What it is</th><th>When it's collected</th></tr>
+    <tr>
+      <td>Anonymous account identifier</td>
+      <td>A random ID (Firebase Authentication, anonymous sign-in). No email, password, name, or
+        other personal identifier is collected in the current version of the app.</td>
+      <td>When you open Account &amp; choose to continue without an account, or use "Sync now".</td>
+    </tr>
+    <tr>
+      <td>Synced learning data</td>
+      <td>If you tap <strong>"Sync now"</strong>: your saved vocabulary words, reading progress,
+        playlists (including Favorites), quiz history, reading/app settings (font size, theme,
+        UI language), learning stats (streaks, daily activity), and badges earned.</td>
+      <td>Only when you manually trigger "Sync now" from the Account or My Progress screen.
+        Sync is never automatic.</td>
+    </tr>
+    <tr>
+      <td>Crash &amp; diagnostic data</td>
+      <td>Automatically collected crash reports (Firebase Crashlytics) - stack traces, device
+        model, OS version, app version. No message you typed or word you looked up is included.</td>
+      <td>Automatically, if the app crashes or hits an error, on mobile builds only.</td>
+    </tr>
+    <tr>
+      <td>Analytics data</td>
+      <td>Aggregate usage data (Firebase Analytics) - screens viewed, feature usage, session
+        length, device/locale info, and an app-instance identifier.</td>
+      <td>Automatically, during normal use.</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    We do <strong>not</strong> collect your name, email address, precise location, contacts, or
+    photos. Storyteller does not sell your data.
+  </div>
+
+  <h3>Microphone (pronunciation practice)</h3>
+  <p>
+    If you use the flashcard "record &amp; compare" pronunciation feature, the app requests
+    microphone access to record your voice for local playback only. This recording is
+    <strong>never uploaded or transmitted</strong> anywhere - it stays on your device and is
+    discarded when you're done practicing.
+  </p>
+
+  <h3>Advertising</h3>
+  <p>
+    The current version of the app does not show advertisements. If ads are enabled in a future
+    update, this policy will be updated first, and any ad network used (AppLovin MAX mediation)
+    will be disclosed here along with its own data practices.
+  </p>
+
+  <h2>2. How We Use Information</h2>
+  <ul>
+    <li>To let you access your saved words, reading progress, and playlists across your devices
+      when you use "Sync now".</li>
+    <li>To diagnose crashes and fix bugs.</li>
+    <li>To understand which features are used, so we can improve the app.</li>
+  </ul>
+
+  <h2>3. Where Data Is Stored</h2>
+  <p>
+    Synced data is stored in <strong>Google Cloud Firestore</strong> (Firebase), scoped so that
+    each account can only read and write its own data - enforced by server-side security rules,
+    not just app-side checks. Data in transit is encrypted (HTTPS/TLS). Data not explicitly
+    synced (e.g. downloaded audio files, download preferences, local notification settings) stays
+    only on your device.
+  </p>
+
+  <h2>4. Third-Party Services</h2>
+  <p>We use the following service providers, each acting as a data processor on our behalf:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Crashlytics, Analytics,
+      Remote Config) - <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+    <li><strong>Cloudflare</strong> - hosts static story content (text, images, audio) delivered
+      over a public CDN; no personal data is sent to this service.</li>
+  </ul>
+
+  <h2>5. Data Retention</h2>
+  <p>
+    Synced data is retained until you request deletion (see below) or until your anonymous
+    account is inactive for an extended period, at which point it may be periodically purged.
+    Crash and analytics data is retained per Firebase's standard retention windows.
+  </p>
+
+  <h2>6. Your Choices &amp; Rights</h2>
+  <ul>
+    <li><strong>Don't sync:</strong> if you never tap "Sync now", no learning data leaves your
+      device.</li>
+    <li><strong>Delete your data:</strong> see our
+      <a href="./data-deletion.html">Data Deletion instructions</a> for how to request removal of
+      any data associated with your account.</li>
+    <li><strong>Uninstall:</strong> uninstalling the app removes all local, on-device data
+      (downloads, settings, local vocabulary/progress not yet synced).</li>
+  </ul>
+
+  <h2>7. Children's Privacy</h2>
+  <p>
+    Storyteller is not directed at children under 13 and is not part of Google Play's Designed
+    for Families program. We do not knowingly collect personal information from children under
+    13. If you believe a child has provided us with personal information, contact us using the
+    details below and we will delete it.
+  </p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>
+    We may update this Privacy Policy as the app evolves (for example, if we add email sign-in,
+    advertising, or purchases). We will update the "Last updated" date above when changes are
+    made. Material changes will be reflected here before they take effect.
+  </p>
+
+  <h2>9. Contact Us</h2>
+  <p>
+    Questions about this policy or your data? Contact:
+    <br>
+    <strong>origvu@gmail.com</strong>
+  </p>
+
+  <footer>
+    Storyteller Privacy Policy · Also see our <a href="./data-deletion.html">Data Deletion page</a>.
+  </footer>
+
+</div>
+</body>
+</html>

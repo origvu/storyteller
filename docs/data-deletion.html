@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Deletion - Storyteller</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e2e2e2;
+    --accent: #4f46e5;
+    --code-bg: #f4f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --fg: #ececec;
+      --muted: #a3a3a3;
+      --border: #2e2e33;
+      --accent: #a5b4fc;
+      --code-bg: #232328;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 96px;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 4px; }
+  h2 { font-size: 1.25rem; margin-top: 2.4em; border-top: 1px solid var(--border); padding-top: 1.4em; }
+  .subtitle { color: var(--muted); margin-top: 0; }
+  .updated { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--accent); }
+  ul { padding-left: 1.3em; }
+  ol { padding-left: 1.3em; }
+  li { margin-bottom: 0.4em; }
+  .callout {
+    background: var(--code-bg);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 1.2em 0;
+    font-size: 0.95rem;
+  }
+  .step-box {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 1em 0;
+  }
+  code { background: var(--code-bg); border-radius: 5px; padding: 1px 6px; font-size: 0.9em; }
+  footer { margin-top: 3em; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Data Deletion</h1>
+  <p class="subtitle">How to request deletion of your Storyteller data</p>
+  <p class="updated">Last updated: <strong>1st August 2026</strong></p>
+
+  <p>
+    This page explains how to delete data associated with your Storyteller account and app usage,
+    in line with Google Play's Data Safety requirements. It complements our
+    <a href="./privacy-policy.html">Privacy Policy</a>.
+  </p>
+
+  <div class="callout">
+    <strong>Current version:</strong> Storyteller only offers anonymous sign-in (no email,
+    password, or name is collected). Your account is identified only by a random ID, so most
+    users have nothing to "delete" beyond uninstalling the app - but if you used
+    <strong>"Sync now"</strong>, some learning data may exist on our servers, and you can request
+    its removal below.
+  </div>
+
+  <h2>1. Data you can remove yourself, right now</h2>
+  <ul>
+    <li><strong>Uninstall the app</strong> - removes all local, on-device data immediately:
+      downloaded stories/audio/dictionary files, reading settings, local vocabulary/progress not
+      yet synced, and any daily-reminder schedule.</li>
+    <li><strong>Never tap "Sync now"</strong> - if you'd rather keep everything local-only, simply
+      don't use the sync feature; no learning data is ever sent to our servers.</li>
+  </ul>
+
+  <h2>2. Requesting deletion of synced data</h2>
+  <p>
+    If you have used "Sync now" at least once, the following data may be stored under your
+    anonymous account in our database:
+  </p>
+  <ul>
+    <li>Saved vocabulary words</li>
+    <li>Reading progress per story</li>
+    <li>Playlists (including Favorites)</li>
+    <li>Quiz history</li>
+    <li>Reading/app settings (font size, theme, UI language)</li>
+    <li>Learning stats (streaks, daily activity, badges earned)</li>
+    <li>Game high scores (if applicable)</li>
+  </ul>
+
+  <div class="step-box">
+    <strong>To request deletion:</strong>
+    <ol>
+      <li>Email <strong>origvu@gmail.com</strong>
+        with the subject line <code>Data deletion request</code>.</li>
+      <li>Include the approximate date you used the app and, if possible, the device/platform
+        (Android) - this helps us locate the right anonymous account, since no email or name is
+        tied to it.</li>
+      <li>We will delete the associated Firestore data within
+        <strong>30 days</strong> of receiving your request and confirm by
+        email once complete.</li>
+    </ol>
+  </div>
+
+  <h2>3. What gets deleted vs. what may remain</h2>
+  <ul>
+    <li><strong>Deleted:</strong> all data listed in Section 2, tied to the account/device you
+      identify.</li>
+    <li><strong>May remain briefly:</strong> anonymized crash reports and aggregate analytics
+      events, which are not linked to your identity and are retained per Firebase's standard
+      diagnostic retention windows.</li>
+  </ul>
+
+  <h2>4. Future: in-app account deletion</h2>
+  <p>
+    If a future update adds email/password sign-in, Storyteller will provide a
+    <strong>"Delete account"</strong> option directly in the app (Account screen), which
+    immediately removes your Firebase Authentication account and all associated Firestore data
+    without needing to email us. This page will be updated when that ships.
+  </p>
+
+  <h2>5. Contact</h2>
+  <p>
+    <strong>origvu@gmail.com</strong>
+  </p>
+
+  <footer>
+    Storyteller Data Deletion Instructions · Also see our <a href="./privacy-policy.html">Privacy Policy</a>.
+  </footer>
+
+</div>
+</body>
+</html>
